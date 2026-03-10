@@ -1,0 +1,90 @@
+<header class="bg-white sticky top-0 z-100 shadow-2xl/30 drop-shadow-xl/50">
+  <nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8">
+    <div class="flex lg:flex-1">
+      <a onclick="link_navigate_to('#')" class="-m-1.5 p-1.5">
+        <span class="sr-only">Your Company</span>
+        <img src="{{root}}logo_big.png" alt="" class="h-8 w-auto" />
+      </a>
+    </div>
+    <div class="flex lg:hidden">
+      <button type="button" command="show-modal" commandfor="mobile-menu" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+        <span class="sr-only">Open main menu</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="size-6">
+          <path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </button>
+    </div>
+
+    <el-popover-group class="hidden lg:flex lg:gap-x-12">
+      <a onclick="link_navigate_to('#')" class="cursor-pointer text-sm/6 font-semibold text-black hover:text-green">Home</a>
+      <a onclick="link_navigate_to('#about')" class="cursor-pointer text-sm/6 font-semibold text-black hover:text-green">Het Nestwerk</a>
+      <a onclick="link_navigate_to('#for_who')" class="cursor-pointer text-sm/6 font-semibold text-black hover:text-green">Voor Wie</a>
+      <a onclick="link_navigate_to('#partners')" class="cursor-pointer text-sm/6 font-semibold text-black hover:text-green">Partners</a>
+      <a onclick="link_navigate_to('#about_me')" class="cursor-pointer text-sm/6 font-semibold text-black hover:text-green">Over mij</a>
+      <a onclick="link_navigate_to('#contact')" class="cursor-pointer text-sm/6 font-semibold text-black hover:text-green">Contact</a>
+      <!--
+      <a href="#" class="text-sm/6 font-semibold text-gray-900">Features</a>
+      <a href="#" class="text-sm/6 font-semibold text-gray-900">Marketplace</a>
+      -->
+    </el-popover-group>
+
+  </nav>
+  <el-dialog>
+    <dialog id="mobile-menu" class="backdrop:bg-transparent lg:hidden">
+      <div tabindex="0" class="fixed inset-0 focus:outline-none">
+        <el-dialog-panel class="fixed inset-y-0 right-0 z-10 flex w-full flex-col justify-between overflow-y-auto bg-white sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+          <div class="p-6">
+            <div class="flex items-center justify-between">
+              <a onclick="link_navigate_to('#')" class="-m-1.5 p-1.5">
+                <span class="sr-only">Your Company</span>
+                <img src="{{root}}logo_big.png" alt="" class="h-8 w-auto" />
+              </a>
+              <button id="mobile_menu_close" type="button" command="close" commandfor="mobile-menu" class="-m-2.5 rounded-md p-2.5 text-gray-700">
+                <span class="sr-only">Close menu</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="size-6">
+                  <path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </button>
+            </div>
+            <div class="mt-6 flow-root">
+              <div class="-my-6 divide-y divide-gray-500/10">
+                <div class="space-y-2 py-6">
+                  <a onclick="link_navigate_to('#about')" class="group -mx-3 flex items-center gap-x-6 rounded-lg p-3 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">
+                    <div class="flex size-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                      <i class="fa-solid fa-circle-info text-gray-600 group-hover:text-green"></i>
+                    </div>
+                    Het Nestwerk
+                  </a>
+                  <a onclick="link_navigate_to('#for_who')" class="group -mx-3 flex items-center gap-x-6 rounded-lg p-3 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">
+                    <div class="flex size-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                      <i class="fa-solid fa-arrows-down-to-people text-gray-600 group-hover:text-green"></i>
+                    </div>
+                    Voor Wie
+                  </a>
+                  <a onclick="link_navigate_to('#partners')" class="group -mx-3 flex items-center gap-x-6 rounded-lg p-3 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">
+                    <div class="flex size-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                      <i class="fa-solid fa-handshake text-gray-600 group-hover:text-green"></i>
+                    </div>
+                    Partners
+                  </a>
+                  <a onclick="link_navigate_to('#about_me')" class="group -mx-3 flex items-center gap-x-6 rounded-lg p-3 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">
+                    <div class="flex size-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                      <i class="fa-solid fa-user-graduate text-gray-600 group-hover:text-green"></i>
+                    </div>
+                    Over mij
+                  </a>
+                  <a onclick="link_navigate_to('#contact')" class="group -mx-3 flex items-center gap-x-6 rounded-lg p-3 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">
+                    <div class="flex size-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                      <i class="fa-solid fa-at text-gray-600 group-hover:text-green"></i>
+                    </div>
+                    Contact
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </el-dialog-panel>
+      </div>
+    </dialog>
+  </el-dialog>
+</header>

@@ -1,0 +1,13 @@
+{
+  "scripts": {
+    "dev": "npx @tailwindcss/cli -i ./src/input.css -o ./build/styles.css --watch",
+    "build": "panini --layouts=./src/layouts/ --root=./src/pages/ --partials=./src/partials/ --output=./build/ ./src/pages/**/*.html",
+    "serve": "cd build && python3 -m http.server 80"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.1.14",
+    "@tailwindplus/elements": "^1.0.18",
+    "tailwindcss": "^4.1.14",
+    "panini": "^1.7.2"
+  }
+}

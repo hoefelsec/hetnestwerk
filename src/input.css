@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+:root {
+}
+
+
+@theme {
+  /*--color-*: initial;*/
+  --color-white: white;
+  --color-green: #2A6649;
+  --color-red: #992727;
+  --color-black: black;
+  --font-sans: "Palatino";
+}
+
+.fade-in {
+  opacity: 0;
+}

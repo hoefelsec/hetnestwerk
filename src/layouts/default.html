@@ -1,0 +1,53 @@
+<!doctype html>
+<html style="height: 100%; overflow: hidden;">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{{root}}styles.css" rel="stylesheet">
+    <title>Het Nestwerk</title>
+  </head>
+  <body class="bg-white text-gray-900" style="height: 100%; overflow: auto;">
+    {{> header}}
+    {{> body}}
+    {{> footer}}
+    <script src="https://cdn.jsdelivr.net/npm/motion@latest/dist/motion.js"></script>
+    <script>
+      const { animate, inView, delay } = Motion
+      inView(".fade-in", (element) => {
+        settings = {
+          "up": { opacity: [0, 1], y: [40, 0] },
+          "down": { opacity: [0, 1], y: [-40, 0] },
+          "left": { opacity: [0, 1], x: [40, 0] },
+          "right": { opacity: [0, 1], x: [-40, 0] },
+        }
+        if (element.classList.contains("up")) {
+          direction = "up";
+        }
+        if (element.classList.contains("down")) {
+          direction = "down";
+        }
+        if (element.classList.contains("left")) {
+          direction = "left";
+        }
+        if (element.classList.contains("right")) {
+          direction = "right";
+        }
+        setting = settings[direction];
+        animate(
+            element,
+            setting,
+            {
+                duration: 1,
+                ease: "anticipate",
+                amount: 0.3
+            }
+        )
+      });
+
+    </script>
+  </body>
+
+  <script src="https://kit.fontawesome.com/5afc5e95c8.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script>
+  <script src="{{root}}/js/nav.js"></script>
+</html>
