@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "dev": "npx @tailwindcss/cli -i ./src/input.css -o ./build/styles.css --watch",
+    "dev": "npx @tailwindcss/cli -i ./src/input.css -o ./build/styles.css --watch --minify",
     "build": "panini --layouts=./src/layouts/ --root=./src/pages/ --partials=./src/partials/ --output=./build/ ./src/pages/**/*.html",
     "serve": "cd build && python3 -m http.server 80"
   },
