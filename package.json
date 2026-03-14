@@ -1,8 +1,8 @@
 {
   "scripts": {
-    "dev": "npx @tailwindcss/cli -i ./src/input.css -o ./build/styles.css --watch --minify",
-    "build": "panini --layouts=./src/layouts/ --root=./src/pages/ --partials=./src/partials/ --output=./build/ ./src/pages/**/*.html",
-    "serve": "cd build && python3 -m http.server 80"
+    "dev": "npx @tailwindcss/cli -i ./src/input.css -o ./docs/styles.css --watch --minify",
+    "build": "panini --layouts=./src/layouts/ --root=./src/pages/ --partials=./src/partials/ --output=./docs/ ./src/pages/**/*.html",
+    "serve": "cd docs && python3 -m http.server 80"
   },
   "devDependencies": {
     "@tailwindcss/cli": "^4.1.14",

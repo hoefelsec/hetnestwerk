@@ -1,5 +1,5 @@
 fswatch --include '.*.html' -l 0.1 -0 src | xargs -0 -n 1 -I % npm run build &
-fswatch --include '.*.js' -l 0.1 -0 src/js | xargs -0 -n 1 -I % basename % | xargs -n 1 -I % ./node_modules/.bin/uglifyjs ./src/js/% -o ./build/js/% &
+fswatch --include '.*.js' -l 0.1 -0 src/js | xargs -0 -n 1 -I % basename % | xargs -n 1 -I % ./node_modules/.bin/uglifyjs ./src/js/% -o ./docs/js/% &
 npm run dev &
 npm run serve &
 
