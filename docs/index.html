@@ -1,19 +1,92 @@
 <!doctype html>
-<html style="height: 100%; overflow: hidden;">
+<html lang="nl" style="height: 100%; overflow: hidden;">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Het Nestwerk | Natuur, mensen en initiatieven verbinden</title>
+    <meta name="description" content="Het Nestwerk verbindt mensen, natuur en initiatieven. Robin van Luit helpt gemeenten, natuurorganisaties, zorg en onderwijs bij natuurinclusieve projecten.">
+    <meta name="author" content="Robin van Luit">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <link rel="canonical" href="https://hetnestwerk.nl/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Het Nestwerk">
+    <meta property="og:locale" content="nl_NL">
+    <meta property="og:url" content="https://hetnestwerk.nl/">
+    <meta property="og:title" content="Het Nestwerk | Natuur, mensen en initiatieven verbinden">
+    <meta property="og:description" content="Het Nestwerk verbindt mensen, natuur en initiatieven. Robin van Luit helpt gemeenten, natuurorganisaties, zorg en onderwijs bij natuurinclusieve projecten.">
+    <meta property="og:image" content="https://hetnestwerk.nl/img/hero.webp">
+    <meta property="og:image:width" content="1000">
+    <meta property="og:image:height" content="1000">
+    <meta property="og:image:alt" content="Iemand raakt lachend de bloesemtakken van een meidoorn aan op een zonnig bospad.">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Het Nestwerk | Natuur, mensen en initiatieven verbinden">
+    <meta name="twitter:description" content="Het Nestwerk verbindt mensen, natuur en initiatieven. Robin van Luit helpt gemeenten, natuurorganisaties, zorg en onderwijs bij natuurinclusieve projecten.">
+    <meta name="twitter:image" content="https://hetnestwerk.nl/img/hero.webp">
+
+    <meta name="theme-color" content="#2A6649">
+
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="preconnect" href="https://kit.fontawesome.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.prod.website-files.com" crossorigin>
+
     <link href="styles.css" rel="stylesheet">
     <link href="favicon.ico" rel="icon">
-    <title>Het Nestwerk</title>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://hetnestwerk.nl/#organisatie",
+          "name": "Het Nestwerk",
+          "url": "https://hetnestwerk.nl/",
+          "description": "Het Nestwerk verbindt mensen, natuur en initiatieven, zodat natuur en samenleving elkaar versterken.",
+          "email": "robin@hetnestwerk.nl",
+          "telephone": "+31654171185",
+          "logo": "https://hetnestwerk.nl/logo_big.png",
+          "image": "https://hetnestwerk.nl/img/hero.webp",
+          "areaServed": { "@type": "Country", "name": "Nederland" },
+          "founder": { "@id": "https://hetnestwerk.nl/#robin" },
+          "sameAs": ["https://www.linkedin.com/in/rvanluit/"],
+          "knowsAbout": [
+            "Natuurinclusief ondernemen",
+            "Natuureducatie",
+            "Burgerparticipatie",
+            "Groene zorg",
+            "Projectcoördinatie"
+          ]
+        },
+        {
+          "@type": "Person",
+          "@id": "https://hetnestwerk.nl/#robin",
+          "name": "Robin van Luit",
+          "email": "robin@hetnestwerk.nl",
+          "telephone": "+31654171185",
+          "worksFor": { "@id": "https://hetnestwerk.nl/#organisatie" },
+          "sameAs": ["https://www.linkedin.com/in/rvanluit/"]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://hetnestwerk.nl/#website",
+          "url": "https://hetnestwerk.nl/",
+          "name": "Het Nestwerk",
+          "inLanguage": "nl-NL",
+          "publisher": { "@id": "https://hetnestwerk.nl/#organisatie" }
+        }
+      ]
+    }
+    </script>
   </head>
   <body class="bg-white text-gray-900" style="height: 100%; overflow: auto;">
     <header class="bg-white sticky top-0 z-100 shadow-2xl/30 drop-shadow-xl/50">
       <nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8">
         <div class="flex lg:flex-1">
-          <a onclick="link_navigate_to('#')" class="-m-1.5 p-1.5">
-            <span class="sr-only">Your Company</span>
-            <img src="logo_big.png" alt="" class="h-8 w-auto" />
+          <a href="#hero" class="-m-1.5 p-1.5">
+            <img src="logo_big.png" alt="Het Nestwerk" width="147" height="32" class="h-8 w-auto" />
           </a>
         </div>
         <div class="flex lg:hidden">
@@ -26,12 +99,12 @@
         </div>
     
         <el-popover-group class="hidden lg:flex lg:gap-x-12">
-          <a onclick="link_navigate_to('#')" class="cursor-pointer text-sm/6 font-semibold text-black hover:text-green">Home</a>
-          <a onclick="link_navigate_to('#about')" class="cursor-pointer text-sm/6 font-semibold text-black hover:text-green">Het Nestwerk</a>
-          <a onclick="link_navigate_to('#for_who')" class="cursor-pointer text-sm/6 font-semibold text-black hover:text-green">Voor Wie</a>
-          <a onclick="link_navigate_to('#partners')" class="cursor-pointer text-sm/6 font-semibold text-black hover:text-green">Partners</a>
-          <a onclick="link_navigate_to('#about_me')" class="cursor-pointer text-sm/6 font-semibold text-black hover:text-green">Over mij</a>
-          <a onclick="link_navigate_to('#contact')" class="cursor-pointer text-sm/6 font-semibold text-black hover:text-green">Contact</a>
+          <a href="#hero" class="cursor-pointer text-sm/6 font-semibold text-black hover:text-green">Home</a>
+          <a href="#about" class="cursor-pointer text-sm/6 font-semibold text-black hover:text-green">Het Nestwerk</a>
+          <a href="#for_who" class="cursor-pointer text-sm/6 font-semibold text-black hover:text-green">Voor Wie</a>
+          <a href="#partners" class="cursor-pointer text-sm/6 font-semibold text-black hover:text-green">Partners</a>
+          <a href="#about_me" class="cursor-pointer text-sm/6 font-semibold text-black hover:text-green">Over mij</a>
+          <a href="#contact" class="cursor-pointer text-sm/6 font-semibold text-black hover:text-green">Contact</a>
           <!--
           <a href="#" class="text-sm/6 font-semibold text-gray-900">Features</a>
           <a href="#" class="text-sm/6 font-semibold text-gray-900">Marketplace</a>
@@ -45,9 +118,8 @@
             <el-dialog-panel class="fixed inset-y-0 right-0 z-10 flex w-full flex-col justify-between overflow-y-auto bg-white sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
               <div class="p-6">
                 <div class="flex items-center justify-between">
-                  <a onclick="link_navigate_to('#')" class="-m-1.5 p-1.5">
-                    <span class="sr-only">Your Company</span>
-                    <img src="logo_big.png" alt="" class="h-8 w-auto" />
+                  <a href="#hero" class="-m-1.5 p-1.5">
+                    <img src="logo_big.png" alt="Het Nestwerk" width="147" height="32" class="h-8 w-auto" />
                   </a>
                   <button id="mobile_menu_close" type="button" command="close" commandfor="mobile-menu" class="-m-2.5 rounded-md p-2.5 text-gray-700">
                     <span class="sr-only">Close menu</span>
@@ -59,31 +131,31 @@
                 <div class="mt-6 flow-root">
                   <div class="-my-6 divide-y divide-gray-500/10">
                     <div class="space-y-2 py-6">
-                      <a onclick="link_navigate_to('#about')" class="group -mx-3 flex items-center gap-x-6 rounded-lg p-3 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">
+                      <a href="#about" class="group -mx-3 flex items-center gap-x-6 rounded-lg p-3 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">
                         <div class="flex size-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
                           <i class="fa-solid fa-circle-info text-gray-600 group-hover:text-green"></i>
                         </div>
                         Het Nestwerk
                       </a>
-                      <a onclick="link_navigate_to('#for_who')" class="group -mx-3 flex items-center gap-x-6 rounded-lg p-3 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">
+                      <a href="#for_who" class="group -mx-3 flex items-center gap-x-6 rounded-lg p-3 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">
                         <div class="flex size-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
                           <i class="fa-solid fa-arrows-down-to-people text-gray-600 group-hover:text-green"></i>
                         </div>
                         Voor Wie
                       </a>
-                      <a onclick="link_navigate_to('#partners')" class="group -mx-3 flex items-center gap-x-6 rounded-lg p-3 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">
+                      <a href="#partners" class="group -mx-3 flex items-center gap-x-6 rounded-lg p-3 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">
                         <div class="flex size-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
                           <i class="fa-solid fa-handshake text-gray-600 group-hover:text-green"></i>
                         </div>
                         Partners
                       </a>
-                      <a onclick="link_navigate_to('#about_me')" class="group -mx-3 flex items-center gap-x-6 rounded-lg p-3 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">
+                      <a href="#about_me" class="group -mx-3 flex items-center gap-x-6 rounded-lg p-3 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">
                         <div class="flex size-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
                           <i class="fa-solid fa-user-graduate text-gray-600 group-hover:text-green"></i>
                         </div>
                         Over mij
                       </a>
-                      <a onclick="link_navigate_to('#contact')" class="group -mx-3 flex items-center gap-x-6 rounded-lg p-3 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">
+                      <a href="#contact" class="group -mx-3 flex items-center gap-x-6 rounded-lg p-3 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">
                         <div class="flex size-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
                           <i class="fa-solid fa-at text-gray-600 group-hover:text-green"></i>
                         </div>
@@ -114,14 +186,14 @@
                 <div class="mx-auto max-w-2xl lg:mx-0 lg:max-w-xl">
                   <h1 class="text-5xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-7xl fade-in down">“Als mensen zich verbonden voelen met hun omgeving, gaan ze er vanzelf zorg voor dragen.”</h1>
                   <div class="mt-10 flex items-center gap-x-6">
-                    <a onclick="link_navigate_to('#about')" class="rounded-md bg-green px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-green focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green fade-in right">Lees verder <span aria-hidden="true">→</span></a>
+                    <a href="#about" class="rounded-md bg-green px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-green focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green fade-in right">Lees verder <span aria-hidden="true">→</span></a>
                   </div>
                 </div>
               </div>
             </div>
           </div>
           <div class="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 fade-in up">
-            <img src="./img/hero.webp" alt="" class="aspect-3/2 object-cover lg:aspect-auto lg:size-full" />
+            <img src="img/hero.webp" alt="Iemand raakt lachend de bloesemtakken van een meidoorn aan op een zonnig bospad." width="1000" height="1000" fetchpriority="high" decoding="async" class="aspect-3/2 object-cover lg:aspect-auto lg:size-full" />
           </div>
         </div>
       </div>
@@ -137,7 +209,7 @@
           <div class="mx-auto grid max-w-2xl grid-cols-1 items-start gap-x-8 gap-y-16 sm:gap-y-24 lg:mx-0 lg:max-w-none lg:grid-cols-2">
             <div class="lg:pr-4 h-full">
               <div class="relative overflow-hidden rounded-3xl bg-gray-900 px-6 pt-64 pb-9 shadow-2xl sm:px-12 lg:max-w-lg lg:px-8 lg:pb-8 xl:px-10 xl:pb-10 fade-in right h-full">
-                <img src="img/about.webp" alt="" class="absolute inset-0 size-full rounded-3xl object-cover brightness-125 saturate-0" />
+                <img src="img/about.webp" alt="" width="550" height="550" loading="lazy" decoding="async" class="absolute inset-0 size-full rounded-3xl object-cover brightness-125 saturate-0" />
                 <div class="absolute inset-0 bg-green mix-blend-multiply"></div>
                 <div aria-hidden="true" class="absolute top-1/2 left-1/2 -ml-16 -translate-x-1/2 -translate-y-1/2 transform-gpu blur-3xl">
                   <div style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)" class="aspect-1097/845 w-274.25 bg-linear-to-tr from-[#ff4694] to-[#776fff] opacity-40"></div>
@@ -160,7 +232,7 @@
             <div>
               <div class="text-base/7 text-gray-700 lg:max-w-lg">
                 <!-- <p class="text-base/7 font-semibold text-indigo-600">Company values</p>-->
-                <h1 class="mt-2 text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl fade-in left">Over Het Nestwerk</h1>
+                <h2 class="mt-2 text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl fade-in left">Over Het Nestwerk</h2>
                 <div class="max-w-xl">
                   <p class="mt-6 fade-in up">Het Nestwerk is een plek waar natuur, mensen en initiatieven samenkomen. Net als een nest is het warm, veilig en stevig opgebouwd uit vele takken. Relaties, ideeën en samenwerking die elkaar dragen. Hier mogen plannen groeien, verbindingen ontstaan en stappen worden gezet.</p>
                   <p class="mt-8 fade-in up">Ik geloof dat echte verandering begint bij beleving en ontmoeting. Een positieve ervaring in de natuur, een goed gesprek of een moment van rust kan iemand op een andere manier laten kijken naar de wereld om ons heen. Vanuit die verbinding ontstaat zorg, verantwoordelijkheid en de motivatie om in beweging te komen.</p>
@@ -206,8 +278,7 @@
           <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
             <div class="lg:pt-4 lg:pr-8">
               <div class="lg:max-w-lg">
-                <!--<h2 class="text-base/7 font-semibold text-indigo-600">Voor wie?</h2>-->
-                <p class="mt-2 text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl fade-in right">Voor wie?</p>
+                <h2 class="mt-2 text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl fade-in right">Voor wie?</h2>
                 <p class="mt-6 text-lg/8 text-gray-700 fade-in up">Ik werk samen met mensen en organisaties die geloven dat natuur meer is dan een decor, en die willen investeren in echte verbinding tussen mens en omgeving.</p>
                 <p class="mt-6 text-lg/8 text-gray-700 fade-in up">Mijn werk is bedoeld voor onder andere:</p>
                 <dl class="mt-10 max-w-xl space-y-8 text-base/7 text-gray-600 lg:max-w-none">
@@ -253,22 +324,22 @@
               <div class="-mx-8 grid grid-cols-2 gap-4 sm:-mx-16 sm:grid-cols-4 lg:mx-0 lg:grid-cols-2 xl:gap-8">
                 <div class="aspect-square overflow-hidden rounded-xl shadow-xl outline-1 -outline-offset-1 shadow-none outline-green fade-in up">
                   <picture class="block size-full object-cover" loading="lazy" decoding="async" alt=""  >
-                    <img src="img/for_who_2.webp"/>
+                    <img src="img/for_who_2.webp" alt="Twee deelnemers zitten op een picknickdeken in het bos en lezen een opdrachtkaart." width="560" height="560" loading="lazy" decoding="async" />
                   </picture>
                 </div>
                 <div class="-mt-8 aspect-square overflow-hidden rounded-xl outline-1 -outline-offset-1 lg:-mt-40 shadow-none outline-green fade-in up">
                   <picture class="block size-full object-cover" loading="lazy" decoding="async" alt=""  >
-                    <img src="img/for_who_1.webp"/>
+                    <img src="img/for_who_1.webp" alt="Deelneemster leest buiten onder een boom een set vragenkaarten." width="560" height="560" loading="lazy" decoding="async" />
                   </picture>
                 </div>
                 <div class="aspect-square overflow-hidden rounded-xl outline-1 -outline-offset-1 shadow-none outline-green fade-in up">
                   <picture class="block size-full object-cover" loading="lazy" decoding="async" alt=""  >
-                    <img src="img/for_who_4.webp"/>
+                    <img src="img/for_who_4.webp" alt="Groep van vier mensen wandelt over een zandpad door het bos." width="560" height="560" loading="lazy" decoding="async" />
                   </picture>
                 </div>
                 <div class="-mt-8 aspect-square overflow-hidden rounded-xl outline-1 -outline-offset-1 lg:-mt-40 shadow-none outline-green fade-in up">
                   <picture class="block size-full object-cover" loading="lazy" decoding="async" alt=""  >
-                    <img src="img/for_who_3.webp"/>
+                    <img src="img/for_who_3.webp" alt="Vragenkaart met het thema Sociaal en een gespreksopdracht om samen te bespreken." width="560" height="560" loading="lazy" decoding="async" />
                   </picture>
                 </div>
               </div>
@@ -285,22 +356,22 @@
           <h2 class="text-xl font-semibold text-gray-900">Enkele klanten die je voorgingen</h2>
           <div class="mt-10 -mx-6 grid grid-cols-2 gap-0.5 overflow-hidden sm:mx-0 sm:rounded-2xl md:grid-cols-3">
             <div class="bg-gray-400/5 p-8 sm:p-10 fade-in up">
-              <img width="158" height="48" src="img/partner_1.webp" alt="Transistor" class="max-h-12 w-full object-contain" />
+              <img width="158" height="48" src="img/partner_1.webp" alt="KlimaatGesprekken" loading="lazy" decoding="async" class="max-h-12 w-full object-contain" />
             </div>
             <div class="bg-gray-400/5 p-6 sm:p-10 fade-in up">
-              <img width="158" height="48" src="img/partner_2.webp" alt="Reform" class="max-h-12 w-full object-contain" />
+              <img width="158" height="48" src="img/partner_2.webp" alt="Collectief Natuurinclusief" loading="lazy" decoding="async" class="max-h-12 w-full object-contain" />
             </div>
             <div class="bg-gray-400/5 p-6 sm:p-10 fade-in up">
-              <img width="158" height="48" src="img/partner_3.webp" alt="Tuple" class="max-h-12 w-full object-contain" />
+              <img width="158" height="48" src="img/partner_3.webp" alt="NFH" loading="lazy" decoding="async" class="max-h-12 w-full object-contain" />
             </div>
             <div class="bg-gray-400/5 p-6 sm:p-10 fade-in up">
-              <img width="158" height="48" src="img/partner_4.webp" alt="Laravel" class="max-h-12 w-full object-contain" />
+              <img width="158" height="48" src="img/partner_4.webp" alt="IVN Natuureducatie" loading="lazy" decoding="async" class="max-h-12 w-full object-contain" />
             </div>
             <div class="bg-gray-400/5 p-6 sm:p-10 fade-in up">
-              <img width="158" height="48" src="img/partner_5.webp" alt="SavvyCal" class="max-h-12 w-full object-contain" />
+              <img width="158" height="48" src="img/partner_5.webp" alt="Huisartsen De Blauwe Jachthoorn" loading="lazy" decoding="async" class="max-h-12 w-full object-contain" />
             </div>
             <div class="bg-gray-400/5 p-6 sm:p-10 fade-in up">
-              <img width="158" height="48" src="img/partner_6.png" alt="Van Hall Larenstein" class="max-h-12 w-full object-contain" />
+              <img width="158" height="48" src="img/partner_6.png" alt="Van Hall Larenstein" loading="lazy" decoding="async" class="max-h-12 w-full object-contain" />
             </div>
           </div>
         </div>
@@ -331,13 +402,13 @@
             <div class="lg:pr-4">
               <div class="lg:max-w-lg">
                 <!--<p class="text-base/7 font-semibold text-indigo-600">Deploy faster</p>-->
-                <h1 class="mt-2 text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl fade-in down">Over mij</h1>
+                <h2 class="mt-2 text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl fade-in down">Over mij</h2>
                 <!--<p class="mt-6 text-xl/8 text-gray-700">Aliquet nec orci mattis amet quisque ullamcorper neque, nibh sem. At arcu, sit dui mi, nibh dui, diam eget aliquam. Quisque id at vitae feugiat egestas.</p>-->
               </div>
             </div>
           </div>
           <div class="-mt-12 -ml-12 p-12 lg:sticky lg:top-4 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden fade-in left">
-            <img src="img/about_me.webp" alt="" class="w-full lg:w-3xl max-w-none rounded-xl bg-gray-900 shadow-xl ring-1 ring-gray-400/10" />
+            <img src="img/about_me.webp" alt="Robin van Luit geeft een presentatie over natuurinclusief werken voor een zaal met publiek." width="1005" height="614" loading="lazy" decoding="async" class="w-full lg:w-3xl max-w-none rounded-xl bg-gray-900 shadow-xl ring-1 ring-gray-400/10" />
           </div>
           <div class="lg:col-span-2 lg:col-start-1 lg:row-start-2 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
             <div class="lg:pr-4">
@@ -369,16 +440,16 @@
                   <h3 class="text-base/7 font-semibold text-gray-900">Robin van Luit</h3>
                   <dl class="mt-3 space-y-1 text-sm/6 text-gray-600">
                     <div>
-                      <dt class="sr-only">Email</dt>
+                      <dt class="sr-only">E-mailadres</dt>
                       <dd><a href="mailto:robin@hetnestwerk.nl" class="font-semibold text-lime-600">robin@hetnestwerk.nl</a></dd>
                     </div>
                     <div class="mt-1">
-                      <dt class="sr-only">Phone number</dt>
+                      <dt class="sr-only">Telefoonnummer</dt>
                       <dd><a href="tel:+31654171185">+31 6 5417-1185</a></dd>
                     </div>
                     <div class="mt-1">
                       <dt class="sr-only">LinkedIn</dt>
-                      <dd><a href="https://www.linkedin.com/in/rvanluit/">https://www.linkedin.com/in/rvanluit/</a></dd>
+                      <dd><a href="https://www.linkedin.com/in/rvanluit/" rel="me noopener">https://www.linkedin.com/in/rvanluit/</a></dd>
                     </div>
                   </dl>
                 </div>
@@ -426,11 +497,20 @@
           </a>
           -->
         </div>
-        <p class="mt-8 text-center text-sm/6 text-gray-600 md:order-1 md:mt-0">&copy; 2026 Het Nestwerk, Inc. All rights reserved.</p>
+        <p class="mt-8 text-center text-sm/6 text-gray-600 md:order-1 md:mt-0">&copy; 2026 Het Nestwerk. Alle rechten voorbehouden.</p>
       </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/motion@latest/dist/motion.js"></script>
     <script>
+      // Alle .fade-in-blokken staan in CSS op opacity:0 en worden pas door
+      // Motion zichtbaar gemaakt. Laadt die bibliotheek niet, dan zou de hele
+      // pagina leeg blijven, ook voor zoekmachines. Val dan terug op
+      // zichtbare inhoud zonder animatie.
+      if (typeof Motion === "undefined") {
+        document.querySelectorAll(".fade-in").forEach((element) => {
+          element.style.opacity = 1;
+        });
+      } else {
       const { animate, inView, delay } = Motion
       inView(".fade-in", (element) => {
         settings = {
@@ -462,11 +542,11 @@
             }
         )
       });
+      }
 
     </script>
+    <script src="https://kit.fontawesome.com/5afc5e95c8.js" crossorigin="anonymous" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script>
+    <script src="js/nav.js" defer></script>
   </body>
-
-  <script src="https://kit.fontawesome.com/5afc5e95c8.js" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script>
-  <script src="js/nav.js"></script>
 </html>

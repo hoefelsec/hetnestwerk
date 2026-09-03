@@ -1,11 +1,85 @@
 <!doctype html>
-<html style="height: 100%; overflow: hidden;">
+<html lang="nl" style="height: 100%; overflow: hidden;">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Het Nestwerk | Natuur, mensen en initiatieven verbinden</title>
+    <meta name="description" content="Het Nestwerk verbindt mensen, natuur en initiatieven. Robin van Luit helpt gemeenten, natuurorganisaties, zorg en onderwijs bij natuurinclusieve projecten.">
+    <meta name="author" content="Robin van Luit">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <link rel="canonical" href="https://hetnestwerk.nl/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Het Nestwerk">
+    <meta property="og:locale" content="nl_NL">
+    <meta property="og:url" content="https://hetnestwerk.nl/">
+    <meta property="og:title" content="Het Nestwerk | Natuur, mensen en initiatieven verbinden">
+    <meta property="og:description" content="Het Nestwerk verbindt mensen, natuur en initiatieven. Robin van Luit helpt gemeenten, natuurorganisaties, zorg en onderwijs bij natuurinclusieve projecten.">
+    <meta property="og:image" content="https://hetnestwerk.nl/img/hero.webp">
+    <meta property="og:image:width" content="1000">
+    <meta property="og:image:height" content="1000">
+    <meta property="og:image:alt" content="Iemand raakt lachend de bloesemtakken van een meidoorn aan op een zonnig bospad.">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Het Nestwerk | Natuur, mensen en initiatieven verbinden">
+    <meta name="twitter:description" content="Het Nestwerk verbindt mensen, natuur en initiatieven. Robin van Luit helpt gemeenten, natuurorganisaties, zorg en onderwijs bij natuurinclusieve projecten.">
+    <meta name="twitter:image" content="https://hetnestwerk.nl/img/hero.webp">
+
+    <meta name="theme-color" content="#2A6649">
+
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="preconnect" href="https://kit.fontawesome.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.prod.website-files.com" crossorigin>
+
     <link href="{{root}}styles.css" rel="stylesheet">
     <link href="{{root}}favicon.ico" rel="icon">
-    <title>Het Nestwerk</title>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://hetnestwerk.nl/#organisatie",
+          "name": "Het Nestwerk",
+          "url": "https://hetnestwerk.nl/",
+          "description": "Het Nestwerk verbindt mensen, natuur en initiatieven, zodat natuur en samenleving elkaar versterken.",
+          "email": "robin@hetnestwerk.nl",
+          "telephone": "+31654171185",
+          "logo": "https://hetnestwerk.nl/logo_big.png",
+          "image": "https://hetnestwerk.nl/img/hero.webp",
+          "areaServed": { "@type": "Country", "name": "Nederland" },
+          "founder": { "@id": "https://hetnestwerk.nl/#robin" },
+          "sameAs": ["https://www.linkedin.com/in/rvanluit/"],
+          "knowsAbout": [
+            "Natuurinclusief ondernemen",
+            "Natuureducatie",
+            "Burgerparticipatie",
+            "Groene zorg",
+            "Projectcoördinatie"
+          ]
+        },
+        {
+          "@type": "Person",
+          "@id": "https://hetnestwerk.nl/#robin",
+          "name": "Robin van Luit",
+          "email": "robin@hetnestwerk.nl",
+          "telephone": "+31654171185",
+          "worksFor": { "@id": "https://hetnestwerk.nl/#organisatie" },
+          "sameAs": ["https://www.linkedin.com/in/rvanluit/"]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://hetnestwerk.nl/#website",
+          "url": "https://hetnestwerk.nl/",
+          "name": "Het Nestwerk",
+          "inLanguage": "nl-NL",
+          "publisher": { "@id": "https://hetnestwerk.nl/#organisatie" }
+        }
+      ]
+    }
+    </script>
   </head>
   <body class="bg-white text-gray-900" style="height: 100%; overflow: auto;">
     {{> header}}
@@ -13,6 +87,15 @@
     {{> footer}}
     <script src="https://cdn.jsdelivr.net/npm/motion@latest/dist/motion.js"></script>
     <script>
+      // Alle .fade-in-blokken staan in CSS op opacity:0 en worden pas door
+      // Motion zichtbaar gemaakt. Laadt die bibliotheek niet, dan zou de hele
+      // pagina leeg blijven, ook voor zoekmachines. Val dan terug op
+      // zichtbare inhoud zonder animatie.
+      if (typeof Motion === "undefined") {
+        document.querySelectorAll(".fade-in").forEach((element) => {
+          element.style.opacity = 1;
+        });
+      } else {
       const { animate, inView, delay } = Motion
       inView(".fade-in", (element) => {
         settings = {
@@ -44,11 +127,11 @@
             }
         )
       });
+      }
 
     </script>
+    <script src="https://kit.fontawesome.com/5afc5e95c8.js" crossorigin="anonymous" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script>
+    <script src="{{root}}js/nav.js" defer></script>
   </body>
-
-  <script src="https://kit.fontawesome.com/5afc5e95c8.js" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script>
-  <script src="{{root}}js/nav.js"></script>
 </html>

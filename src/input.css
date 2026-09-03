@@ -10,7 +10,7 @@
   --color-green: #2A6649;
   --color-red: #992727;
   --color-black: black;
-  --font-sans: "Palatino";
+  --font-sans: "Palatino Linotype", Palatino, "Book Antiqua", "URW Palladio L", Georgia, serif;
 }
 
 .fade-in {

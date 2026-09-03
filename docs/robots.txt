@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+
+# Verweesde build-artefacten uit een eerdere sitestructuur.
+# Niet vanuit de navigatie bereikbaar en deels met gebroken afbeeldingen.
+Disallow: /philosophy.html
+Disallow: /services.html
+Disallow: /hero.html
+Disallow: /testimonials.html
+Disallow: /about_me.html
+Disallow: /contact.html
+
+Sitemap: https://hetnestwerk.nl/sitemap.xml
